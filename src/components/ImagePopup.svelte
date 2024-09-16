@@ -16,7 +16,6 @@
     function closeModal() {
       showModal = false;
       selectedImage = '';
-      console.log('close OK');
     }
   </script>
   
@@ -37,7 +36,7 @@
     }
 
     .gallery img:hover {
-        transform: scale(1.1); /* 이미지 확대 비율 */
+        transform: scale(1.05); /* 이미지 확대 비율 */
     }
   </style>
   

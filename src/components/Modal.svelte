@@ -9,7 +9,6 @@
         // 모달의 배경을 클릭했을 때만 닫기
         if (event.target.classList.contains('modal')) {
             onClose();
-            console.log('close');
         }
     }
   

@@ -148,7 +148,4 @@
         align-items: center;
         margin:auto;
     }
-
-    .img { opacity: 1; transition: all .2s }
-	.img:hover { opacity: 1; transform: scale(1.04) }
 </style>
