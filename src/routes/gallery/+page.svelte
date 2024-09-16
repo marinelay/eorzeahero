@@ -10,6 +10,8 @@
 
     import images from '$lib/assets/gallery/images.json'
 
+    import ImagePopup from '../../components/ImagePopup.svelte';
+
     let maxPagination = 5;
     let curPage = 1;
     let itemsPerPage = 12;
@@ -134,7 +136,8 @@
 
 <Gallery class="mt-8 ml-8 mr-8 mb-12 gap-4 grid-cols-2 md:grid-cols-4">
     {#each listOfImages as images}
-        <Gallery items={images} />
+        <ImagePopup {images} />
+     <!-- <Gallery items={images} /> -->
     {/each}
 </Gallery>
 
@@ -146,6 +149,6 @@
         margin:auto;
     }
 
-    :global(img) { opacity: 1; transition: all .2s }
-	:global(img):hover { opacity: 1; transform: scale(1.04) }
+    .img { opacity: 1; transition: all .2s }
+	.img:hover { opacity: 1; transform: scale(1.04) }
 </style>
