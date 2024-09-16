@@ -27,7 +27,7 @@
     }
   
     .gallery img {
-        width: 480px; /* 원하는 너비 설정 */
+        /* width: 720px; 원하는 너비 설정 */
         height: auto; /* 원본 비율 유지 */
         object-fit: cover; /* 이미지가 정사각형으로 잘리지 않도록 조정 */
         cursor: pointer;

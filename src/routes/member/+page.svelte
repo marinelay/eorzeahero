@@ -6,7 +6,7 @@
 
 <Navbar/>
 
-<div class="card-container">
+<div class="card-container pt-8">
     <Card class='card' padding="md">
     <div class="flex flex-col items-center">
         <img class="p-2 pb-8 rounded-t-lg" src="/images/profile/ponytail.webp" alt="product 1" />

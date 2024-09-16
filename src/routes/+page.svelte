@@ -7,6 +7,9 @@
     import { Blockquote } from 'flowbite-svelte';
     import { QuoteSolid } from 'flowbite-svelte-icons';
 
+    import { Badge } from 'flowbite-svelte';
+    import { ClockSolid } from 'flowbite-svelte-icons';
+
     import { page } from '$app/stores';
     // import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
     $: activeUrl = $page.url.pathname;
@@ -16,6 +19,8 @@
 
 <Navbar/>
 
+<div class='main-container'>
+
 <div class="text-center">
 <Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">
     에오르제아 용사
@@ -23,6 +28,11 @@
 <P class="text-center mb-6 text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
     용사들이 모인 공간입니다. 여러분들의 이야기를 들려주세요.
 </P>
+
+<Badge large color="dark" border class="mb-8">
+    <ClockSolid class="w-3.5 h-3.5 me-1.5" />
+    24.09.17
+  </Badge>
 <!-- <Button href="/">
     Learn more
     <ArrowRightOutline class="w-6 h-6 ms-2" />
@@ -46,8 +56,17 @@
 
 </figure>
 
+</div>
+
 
 <style>
+
+.main-conatainer {
+    width: 85%;
+    align-items: center;
+    margin:auto;
+}
+
 .container {
     margin: 0 auto;
 }

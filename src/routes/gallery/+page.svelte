@@ -124,6 +124,8 @@
 
 <Navbar/>
 
+<div class = "main-conatainer">
+
 <div class="text-center mt-8">
     <Heading tag="h1" class="mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">용사들 모음집</Heading>
 </div>
@@ -141,7 +143,15 @@
     {/each}
 </Gallery>
 
+</div>
+
 <style>
+    .main-conatainer {
+        width: 85%;
+        align-items: center;
+        margin:auto;
+    }
+
     .container {
         display: flex;
         justify-content: center;
