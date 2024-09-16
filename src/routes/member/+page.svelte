@@ -67,17 +67,6 @@
     </div>
 </Card>
 
-<Card class='card' padding="md">
-    <div class="flex flex-col items-center">
-        <img class="p-2 pb-8 rounded-t-lg" src="/images/profile/jjipark.webp" alt="product 1" />
-        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">팍모찌</h5>
-        <span class="text-sm text-gray-500 dark:text-gray-400">제국이여 영원하라!</span>
-        <div class="flex mt-4 space-x-3 rtl:space-x-reverse">
-        <!-- <Button>Add friend</Button>
-        <Button color="light" class="dark:text-white">Message</Button> -->
-        </div>
-    </div>
-</Card>
 
 </div>
 
