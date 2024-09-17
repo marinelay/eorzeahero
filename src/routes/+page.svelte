@@ -29,8 +29,8 @@
 <div class="one-third mr-4">
 
 
-    <Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">
-        에오르제아 용사
+    <Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-3xl lg:text-4xl">
+        에오르제아의 용사들
     </Heading>
     <P class="mb-6 text-lg lg:text-xl dark:text-gray-400">
         용사들이 모인 공간입니다. 용사라면 누구나 <Span highlight>환영</Span>합니다.

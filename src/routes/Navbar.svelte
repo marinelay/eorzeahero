@@ -8,12 +8,12 @@
 <Navbar class="border px-5 py-2 rounded-lg bg-gray-100">
     <NavBrand href="/">
         <!-- <img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
-        <span class="self-center whitespace-nowrap text-4xl font-semibold dark:text-white">Eorzea Hero</span>
+        <span class="self-center whitespace-nowrap text-3xl font-semibold dark:text-white">자유부대 &lt;에용&gt;</span>
     </NavBrand>
     <NavHamburger />
     <NavUl {activeUrl}>
-        <NavLi href="/" class="text-2xl">Home</NavLi>
-        <NavLi href="/member" class="text-2xl">Member</NavLi>
-        <NavLi href="/gallery" class="text-2xl">Gallery</NavLi>
+        <NavLi href="/" class="text-xl">Home</NavLi>
+        <NavLi href="/member" class="text-xl">Member</NavLi>
+        <NavLi href="/gallery" class="text-xl">Gallery</NavLi>
     </NavUl>
 </Navbar>
