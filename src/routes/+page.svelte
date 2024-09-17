@@ -7,8 +7,11 @@
     import { Blockquote } from 'flowbite-svelte';
     import { QuoteSolid } from 'flowbite-svelte-icons';
 
-    import { Badge } from 'flowbite-svelte';
+    import { Badge, Hr, Span } from 'flowbite-svelte';
     import { ClockSolid } from 'flowbite-svelte-icons';
+
+    import { Timeline, TimelineItem } from 'flowbite-svelte';
+    import { CalendarWeekSolid, HomeOutline } from 'flowbite-svelte-icons';
 
     import { page } from '$app/stores';
     // import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
@@ -19,25 +22,38 @@
 
 <Navbar/>
 
-<div class='main-container'>
+<div class='main'>
 
-<div class="text-center">
-<Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">
-    에오르제아 용사
-</Heading>
-<P class="text-center mb-6 text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-    용사들이 모인 공간입니다. 여러분들의 이야기를 들려주세요.
-</P>
+<div class="divider-wrapper">
+<div class="divider mt-8">
+<div class="one-third mr-4">
 
-<Badge large color="dark" border class="mb-8">
-    <ClockSolid class="w-3.5 h-3.5 me-1.5" />
-    24.09.17
-  </Badge>
-<!-- <Button href="/">
-    Learn more
-    <ArrowRightOutline class="w-6 h-6 ms-2" />
-</Button> -->
+
+    <Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">
+        에오르제아 용사
+    </Heading>
+    <P class="mb-6 text-lg lg:text-xl dark:text-gray-400">
+        용사들이 모인 공간입니다. 용사라면 누구나 <Span highlight>환영</Span>합니다.
+    </P>
+    
+    <!-- <Button href="/">
+        Learn more
+        <ArrowRightOutline class="w-6 h-6 ms-2" />
+    </Button> -->
+    <figure class="mt-8 mb-8 mx-auto max-w-screen-md">
+    
+    <Blockquote size="xl">
+        <QuoteSolid class="mb-3 w-12 h-12 text-gray-400 dark:text-gray-600" />
+        죽음도 불사하며 죽어간 용사들의 용기를 과소평가 하지 않는 것처럼, 우리 또한 용사들이 삶으로 보여준 용맹함을 잊지 말아야 한다.
+    </Blockquote>
+    <figcaption class="flex justify-center items-center mt-6 space-x-3 rtl:space-x-reverse">
+        <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+          <cite class="pe-3 font-medium text-gray-900 dark:text-white">존 F. 케네디</cite>
+        </div>
+      </figcaption>
+    </figure>
 </div>
+<div class="two-thirds ml-4">
 
 <div class="max-w-4xl container">
 <Carousel {images} let:Indicators let:Controls duration={6000}>
@@ -45,29 +61,115 @@
     <Indicators />
 </Carousel>
 </div>
+</div>  
+</div>
+</div>
 
+<Hr classHr="w-72 h-1 mx-auto my-4 rounded md:my-10" />
 
-<figure class="mt-8 mx-auto max-w-screen-md text-center">
-<QuoteSolid class="mx-auto mb-3 w-12 h-12 text-gray-400 dark:text-gray-600" />
-<Blockquote alignment="center" size="xl">
-    겁쟁이는 죽기 전에 여러 번 죽지만, 용사는 한 번밖에 죽지 않소. <br/>
-    - 윌리엄 셰익스피어
-</Blockquote>
+<div class="timeline-wrapper">
+<div class="timeline-container">
+<Timeline>
+    <TimelineItem title="자유부대 <에용> 설립" date="2023. 04. 03">
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">위대한 용사들의 만남이 시작되었다! 이제 각자의 운명을 연결할 모험이 펼쳐칠 차례다!</p>
+    </TimelineItem>
+    <TimelineItem title="용사하우스 개방" date="2024. 08. 31">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+            모든 용사들이 모여 전략을 논의하고, 전투의 피로를 풀며, 새로운 동맹을 맺을 수 있는 거점이 마련되었다. 용사들의 휴식과 교류의 장이 되리라!
+            <br/><br/>
+            <HomeOutline/>에오르제아 용사하우스, 안개빛 마을 2구 41번지, 톤베리
+        </p>
+      </TimelineItem>
+    <TimelineItem title="홈페이지 개설" date="2024. 09. 17">
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사들은 홈페이지를 개설하여 연대를 더욱 굳건히 하였다! 그들의 힘과 지혜가 더욱 강력하게 결집되어, 새로운 도전이 기다리고 있다!</p>
+    </TimelineItem>
+  </Timeline>
+</div>
+</div>
 
-</figure>
+<div class="text-center">
+    <!-- <Heading tag="h1" class="mt-8 mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">
+        에오르제아 용사
+    </Heading>
+    <P class="text-center mb-6 text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        용사들이 모인 공간입니다. 용사라면 누구나 환영합니다.
+    </P> -->
+    
+    <Badge large color="dark" border class="mb-8">
+        <ClockSolid class="w-3.5 h-3.5 me-1.5" />
+        Updated on 24.09.17
+      </Badge>
+    <!-- <Button href="/">
+        Learn more
+        <ArrowRightOutline class="w-6 h-6 ms-2" />
+    </Button> -->
+    </div>
+
 
 </div>
 
 
 <style>
 
-.main-conatainer {
-    width: 85%;
+.main {
+    width: 100%;
     align-items: center;
+    justify-content: center; /* 가로 중앙 정렬 */
     margin:auto;
 }
 
 .container {
     margin: 0 auto;
 }
+
+.divider-wrapper {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.timeline-wrapper {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    flex-wrap: wrap; /* 작을 때 세로로 쌓일 수 있도록 허용 */
+    padding: 0 16px; /* 좌우 여백 */
+}
+
+.timeline-container {
+    width: 33%;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+
+.divider {
+    display: flex;
+    width: 60%;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    flex-wrap: wrap; /* 작을 때 세로로 쌓일 수 있도록 허용 */
+    padding: 0 16px; /* 좌우 여백 */
+}
+
+.two-thirds {
+flex: 4; /* 2/3의 비율 */
+/* background-color: lightblue; */
+}
+
+.one-third {
+flex: 3; /* 1/3의 비율 */
+/* background-color: lightcoral; */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .timeline-container,
+    .divider {
+        width:90%;
+    }
+    .two-thirds,
+    .one-third {
+        flex: 100%; /* 작은 화면에서는 모두 가로 폭을 100%로 설정 */
+}
+}
+
 </style>
