@@ -1,0 +1,37 @@
+[
+    {
+        "name": "포니테일검사여자",
+        "desc": "용사가 되고 싶은자는 나에게...",
+        "image": "/images/profile/ponytail.webp"
+    },
+    {
+        "name": "박사송도원",
+        "desc": "에오르제아의 새로운 새벽. 박사송도원",
+        "image": "/images/profile/dowon.webp"
+    },
+    {
+        "name": "잔하루",
+        "desc": "이름이 멋스러운 잔하루.",
+        "image": "/images/profile/janharu.webp"
+    },
+    {
+        "name": "강해린냥냥펀치",
+        "desc": "훌쩍 커버렸어 함께 한 기억처럼",
+        "image": "/images/profile/haerin.webp"
+    },
+    {
+        "name": "팍모찌",
+        "desc": "제국이여 영원하라!",
+        "image": "/images/profile/jjipark.webp"
+    },
+    {
+        "name": "코구리",
+        "desc": "히보두스 히두보스 히두스보를 타보겠습니다",
+        "image": "/images/profile/koguri.webp"
+    },
+    {
+        "name": "닐센",
+        "desc": "\"아주 좋아!\"",
+        "image": "/images/profile/nilsen.webp"
+    }
+]
