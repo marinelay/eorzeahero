@@ -137,8 +137,9 @@
 </div>
 
 <Gallery class="mt-8 ml-8 mr-8 mb-12 gap-4 grid-cols-2 md:grid-cols-4">
-    {#each listOfImages as images}
-        <ImagePopup {images} />
+    {#each listOfImages as images, listIndex}
+        
+        <ImagePopup {images} {listIndex} {columnImages} {listOfImages}/>
      <!-- <Gallery items={images} /> -->
     {/each}
 </Gallery>

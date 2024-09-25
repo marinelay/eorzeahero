@@ -42,7 +42,7 @@
     top: 10px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 </style>
