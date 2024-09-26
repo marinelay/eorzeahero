@@ -97,13 +97,11 @@
         용사들이 모인 공간입니다. 용사라면 누구나 환영합니다.
     </P> -->
 
-    <Button id="ack">
-        <Badge large color="dark" border class="mb-8">
+        <Badge large color="dark" border class="mb-8" id="ack">
             <ClockSolid class="w-3.5 h-3.5 me-1.5" />
             Updated on {buildDate}
         </Badge>
         <Tooltip trigger="ack" triggeredBy="#click" placement='bottom'>Thanks to Sambyeol</Tooltip>
-    </Button>
     <!-- <Button href="/">
         Learn more
         <ArrowRightOutline class="w-6 h-6 ms-2" />
