@@ -18,6 +18,8 @@
     $: activeUrl = $page.url.pathname;
 
     import Navbar from './Navbar.svelte';
+
+    const buildDate = __BUILD_DATE__;
 </script>
 
 <Navbar/>
@@ -97,7 +99,7 @@
     
     <Badge large color="dark" border class="mb-8">
         <ClockSolid class="w-3.5 h-3.5 me-1.5" />
-        Updated on 24.09.17
+        Updated on {buildDate}
       </Badge>
     <!-- <Button href="/">
         Learn more
