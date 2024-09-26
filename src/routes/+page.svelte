@@ -101,7 +101,7 @@
             <ClockSolid class="w-3.5 h-3.5 me-1.5" />
             Updated on {buildDate}
         </Badge>
-        <Tooltip trigger="ack" triggeredBy="#click" placement='bottom'>Thanks to Sambyeol</Tooltip>
+        <Tooltip trigger="click" triggeredBy="#ack" placement='bottom'>Thanks to Sambyeol</Tooltip>
     <!-- <Button href="/">
         Learn more
         <ArrowRightOutline class="w-6 h-6 ms-2" />
