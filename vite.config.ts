@@ -4,6 +4,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	define: {
-        	__build_date__: JSON.stringify(new Date().toUTCString()),
-    	},
+	    __BUILD_DATE__: JSON.stringify(new Date().toISOString().split('T')[0]), // 날짜까지만 표시
+	  },
 });
