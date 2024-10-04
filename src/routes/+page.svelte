@@ -85,6 +85,9 @@
     <TimelineItem title="홈페이지 개설" date="2024. 09. 17">
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사들은 홈페이지를 개설하여 연대를 더욱 굳건히 하였다! 그들의 힘과 지혜가 더욱 강력하게 결집되어, 새로운 도전이 기다리고 있다!</p>
     </TimelineItem>
+    <TimelineItem title="디스코드 서버 생성" date="2024. 09. 26">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">이제 용사들은 이곳에서 실시간으로 소통하며, 전략을 공유하고, 전투의 흐름을 조율할 수 있는 강력한 커뮤니케이션 도구를 얻게 되었다!</p>
+      </TimelineItem>
   </Timeline>
 </div>
 </div>
