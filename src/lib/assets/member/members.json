@@ -26,7 +26,7 @@
     },
     {
         "name": "코구리",
-        "desc": "히보두스 히두보스 히두스보를 타보겠습니다",
+        "desc": "코구리도리",
         "image": "/images/profile/koguri.webp"
     },
     {
@@ -36,12 +36,22 @@
     },
     {
         "name": "락스타지망생허준용",
-        "desc": "지옥에서 살아을 담아서......",
+        "desc": "지옥에서 사랑을 담아서......",
         "image": "/images/profile/rockstar.webp"
     },
     {
         "name": "라따뚜이찾습니다",
         "desc": "쓰리스타 라따뚜이를 위하여!",
         "image": "/images/profile/ratta.webp"
+    },
+    {
+        "name": "발러이우스",
+        "desc": "\"어둠의 실력자가 되고 싶어서...\"",
+        "image": "/images/profile/valler.webp"
+    },
+    {
+        "name": "Dragonbuy",
+        "desc": "얼렁뚱땅 용사핑",
+        "image": "/images/profile/dragonbuy.webp"
     }
 ]
