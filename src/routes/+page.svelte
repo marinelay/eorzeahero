@@ -72,9 +72,10 @@
 <div class="timeline-wrapper">
 <div class="timeline-container">
 <Timeline>
-    <TimelineItem title="용사하우스 확장 이전" date="2024. 09. 26">
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사하우스가 새로운 터전으로 이전하였다! 이제 더욱 광활한 공간에서 전설을 써 내려갈 용사들은, 불굴의 의지와 단단한 동맹으로 거대한 모험을 향해 나아갈 것이다! 이곳은 그들의 신화가 시작될 진정한 성지가 되리라!</p>
+    <TimelineItem title="용사하우스 확장 이전" date="2024. 10. 15">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사하우스가 새로운 터전으로 이전하였다! 이제 더욱 광활한 공간에서 전설을 써 내려갈 용사들은, 불굴의 의지와 단단한 동맹으로 거대한 모험을 향해 나아갈 것이다! 이곳은 그들의 신화가 시작될 진정한 성지가 되리라!
         <br/>
+    </p>
         <HomeOutline/>에오르제아 용사하우스, 시로가네 13구 31번지, 톤베리
     </TimelineItem>
     <TimelineItem title="디스코드 서버 생성" date="2024. 09. 26">
