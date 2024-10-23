@@ -72,22 +72,30 @@
 <div class="timeline-wrapper">
 <div class="timeline-container">
 <Timeline>
-    <TimelineItem title="자유부대 <에용> 설립" date="2023. 04. 03">
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">위대한 용사들의 만남이 시작되었다! 이제 각자의 운명을 연결할 모험이 펼쳐칠 차례다!</p>
+    <TimelineItem title="용사하우스 확장 이전" date="2024. 09. 26">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사하우스가 새로운 터전으로 이전하였다! 이제 더욱 광활한 공간에서 전설을 써 내려갈 용사들은, 불굴의 의지와 단단한 동맹으로 거대한 모험을 향해 나아갈 것이다! 이곳은 그들의 신화가 시작될 진정한 성지가 되리라!</p>
+        <br/>
+        <HomeOutline/>에오르제아 용사하우스, 시로가네 13구 31번지, 톤베리
     </TimelineItem>
-    <TimelineItem title="용사하우스 개방" date="2024. 08. 31">
+    <TimelineItem title="디스코드 서버 생성" date="2024. 09. 26">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">이제 용사들은 이곳에서 실시간으로 소통하며, 전략을 공유하고, 전투의 흐름을 조율할 수 있는 강력한 커뮤니케이션 도구를 얻게 되었다!</p>
+      </TimelineItem>
+      <TimelineItem title="홈페이지 개설" date="2024. 09. 17">
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사들은 홈페이지를 개설하여 연대를 더욱 굳건히 하였다! 그들의 힘과 지혜가 더욱 강력하게 결집되어, 새로운 도전이 기다리고 있다!</p>
+      </TimelineItem>
+      <TimelineItem title="용사하우스 개방" date="2024. 08. 31">
         <p class="text-base font-normal text-gray-500 dark:text-gray-400">
             모든 용사들이 모여 전략을 논의하고, 전투의 피로를 풀며, 새로운 동맹을 맺을 수 있는 거점이 마련되었다. 용사들의 휴식과 교류의 장이 되리라!
             <br/><br/>
             <HomeOutline/>에오르제아 용사하우스, 안개빛 마을 2구 41번지, 톤베리
         </p>
       </TimelineItem>
-    <TimelineItem title="홈페이지 개설" date="2024. 09. 17">
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">용사들은 홈페이지를 개설하여 연대를 더욱 굳건히 하였다! 그들의 힘과 지혜가 더욱 강력하게 결집되어, 새로운 도전이 기다리고 있다!</p>
+    
+    <TimelineItem title="자유부대 <에용> 설립" date="2023. 04. 03">
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">위대한 용사들의 만남이 시작되었다! 이제 각자의 운명을 연결할 모험이 펼쳐칠 차례다!</p>
     </TimelineItem>
-    <TimelineItem title="디스코드 서버 생성" date="2024. 09. 26">
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">이제 용사들은 이곳에서 실시간으로 소통하며, 전략을 공유하고, 전투의 흐름을 조율할 수 있는 강력한 커뮤니케이션 도구를 얻게 되었다!</p>
-      </TimelineItem>
+    
+    
   </Timeline>
 </div>
 </div>
