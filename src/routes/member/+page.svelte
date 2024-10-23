@@ -36,4 +36,11 @@
         gap: 16px;
         flex-wrap: wrap; /* 필요한 경우 여러 줄로 표시 */
     }
+
+
+    img {
+        max-width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+    }
 </style>
