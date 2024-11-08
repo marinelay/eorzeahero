@@ -21,7 +21,7 @@
     },
     {
         "name": "팍모찌",
-        "desc": "제국이여 영원하라!",
+        "desc": "제국야만신",
         "image": "/images/profile/jjipark.webp"
     },
     {
@@ -53,5 +53,10 @@
         "name": "Dragonbuy",
         "desc": "얼렁뚱땅 용사핑",
         "image": "/images/profile/dragonbuy.webp"
+    },
+    {
+        "name": "꺼멍",
+        "desc": "겉바속촉..",
+        "image": "/images/profile/black.webp"
     }
 ]
