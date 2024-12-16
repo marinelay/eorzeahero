@@ -56,7 +56,22 @@
     },
     {
         "name": "꺼멍",
-        "desc": "겉바속촉..",
+        "desc": "집 살 때까지 창천 열심히 민다...",
         "image": "/images/profile/black.webp"
-    }
+    },
+    {
+        "name": "Noinne",
+        "desc": "하나씩 알아가는중 ..",
+        "image": "/images/profile/noinne.webp"
+    },
+    {
+        "name": "바반바",
+        "desc": "baba is me",
+        "image": "/images/profile/babanba.webp"
+    },
+    {
+        "name": "트라이문",
+        "desc": "오직 흑마만",
+        "image": "/images/profile/trimoon.webp"
+    },
 ]
