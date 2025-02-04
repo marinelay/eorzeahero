@@ -88,5 +88,10 @@
         "name": "특급배달해달",
         "desc": "철가방부터 시작하는 에오르제아 모험",
         "image": "/images/profile/baehae.webp"
+    },
+    {
+        "name": "달베리",
+        "desc": "새싹의 에오르제아 모험여행",
+        "image": "/images/profile/dalberry.webp"
     }
 ]
