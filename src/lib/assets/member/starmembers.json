@@ -1,0 +1,42 @@
+[
+    {
+        "name": "팍모찌",
+        "desc": "제국야만신",
+        "image": "/images/profile/jjipark.webp"
+    },
+    {
+        "name": "라따뚜이찾습니다",
+        "desc": "쓰리스타 라따뚜이를 위하여!",
+        "image": "/images/profile/ratta.webp"
+    },
+    {
+        "name": "발러이우스",
+        "desc": "\"어둠의 실력자가 되고 싶어서...\"",
+        "image": "/images/profile/valler.webp"
+    },
+    {
+        "name": "Dragonbuy",
+        "desc": "얼렁뚱땅 용사핑",
+        "image": "/images/profile/dragonbuy.webp"
+    },
+    {
+        "name": "꺼멍",
+        "desc": "집 살 때까지 창천 열심히 민다...",
+        "image": "/images/profile/black.webp"
+    },
+    {
+        "name": "Noinne",
+        "desc": "하나씩 알아가는중 ..",
+        "image": "/images/profile/noinne.webp"
+    },
+    {
+        "name": "트라이문",
+        "desc": "오직 흑마만",
+        "image": "/images/profile/trimoon.webp"
+    },
+    {
+        "name": "리므룽",
+        "desc": "감 자 조 아",
+        "image": "/images/profile/limu.webp"
+    }
+]

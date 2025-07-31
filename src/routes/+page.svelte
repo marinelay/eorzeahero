@@ -14,6 +14,7 @@
     import { CalendarWeekSolid, HomeOutline } from 'flowbite-svelte-icons';
 
     import { page } from '$app/stores';
+
     // import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
     $: activeUrl = $page.url.pathname;
 
@@ -31,9 +32,10 @@
 <div class="one-third mr-4">
 
 
-    <Heading tag="h1" class="mt-8 mb-4 text-orange-400">
+    <img src="/images/title.webp" class="mb-4"/>
+    <!-- <Heading tag="h1" class="mt-8 mb-4 text-orange-400">
         에오르제아의 용사들
-    </Heading>
+    </Heading> -->
     <P class="mb-6 text-lg lg:text-xl dark:text-gray-400">
         용사들이 모인 공간입니다. 용사라면 누구나 <Span highlight="blue">환영</Span>합니다.
     </P>
