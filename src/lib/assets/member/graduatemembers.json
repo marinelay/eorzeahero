@@ -8,5 +8,10 @@
         "name": "달베리",
         "desc": "림사에서 마주칠 때마다 내적친밀감 느끼고 있어요",
         "image": "/images/profile/dalberry.webp"
+    },
+    {
+        "name": "바반바",
+        "desc": "baba is me",
+        "image": "/images/profile/babanba.webp"
     }
 ]

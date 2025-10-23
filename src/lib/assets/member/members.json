@@ -35,12 +35,7 @@
         "image": "/images/profile/rockstar.webp"
     },
     
-    {
-        "name": "바반바",
-        "desc": "baba is me",
-        "image": "/images/profile/babanba.webp"
-    },
-    
+
     {
         "name": "파륄",
         "desc": "역대 최강의 호카게 사루토비 히루젠",
@@ -62,6 +57,11 @@
         "image": "/images/profile/gansik.webp"
     },
     {
+        "name": "먼나무",
+        "desc": "이끌리는 사람들을 위한 하나의 팻말같은 존재",
+        "image": "/images/profile/muntree.webp"
+    },
+    {
         "name": "히버",
         "desc": "나는 히버다",
         "image": "/images/profile/hiber.webp"
@@ -80,5 +80,10 @@
         "name": "김오전",
         "desc": "나는 김오전이다",
         "image": "/images/profile/ozun.webp"
+    },
+    {
+        "name": "김맑음",
+        "desc": "에오르제아 물리치료사",
+        "image": "/images/profile/fresh.webp"
     }
 ]
