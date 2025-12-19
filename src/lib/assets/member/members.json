@@ -15,7 +15,7 @@
         "image": "/images/profile/janharu.webp"
     },
     {
-        "name": "강해린냥냥펀치",
+        "name": "배효서",
         "desc": "훌쩍 커버렸어 함께 한 기억처럼",
         "image": "/images/profile/haerin.webp"
     },
@@ -39,12 +39,12 @@
     {
         "name": "파륄",
         "desc": "역대 최강의 호카게 사루토비 히루젠",
-        "image": "/images/profile/hiruzen.webp"
+        "image": "/images/profile/parruel.webp"
     },
     {
         "name": "오톨",
         "desc": "철가방부터 시작하는 에오르제아 모험",
-        "image": "/images/profile/daldal.webp"
+        "image": "/images/profile/otol.webp"
     },
     {
         "name": "망나니딴따라",
@@ -67,15 +67,11 @@
         "image": "/images/profile/hiber.webp"
     },
     {
-        "name": "폴르",
-        "desc": "나는 폴르다",
-        "image": "/images/profile/pollu.webp"
-    },
-    {
         "name": "프렌치프레이",
         "desc": "나는 프렌치프레이다",
         "image": "/images/profile/french.webp"
     },
+    
     {
         "name": "김오전",
         "desc": "나는 김오전이다",
@@ -85,5 +81,10 @@
         "name": "김맑음",
         "desc": "에오르제아 물리치료사",
         "image": "/images/profile/fresh.webp"
+    },
+    {
+        "name": "검성'",
+        "desc": "",
+        "image": "/images/profile/swordman.webp"
     }
 ]
