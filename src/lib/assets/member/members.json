@@ -83,6 +83,11 @@
         "image": "/images/profile/fresh.webp"
     },
     {
+        "name": "블렌도",
+        "desc": "이름이 믹서기스러운 블렌더",
+        "image": "/images/profile/blender.webp"
+    },
+    {
         "name": "검성'",
         "desc": "검의 길을 걷는 자",
         "image": "/images/profile/swordman.webp"
