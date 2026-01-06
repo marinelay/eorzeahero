@@ -20,11 +20,6 @@
         "image": "/images/profile/haerin.webp"
     },
     {
-        "name": "코구리",
-        "desc": "나는 코구리다",
-        "image": "/images/profile/koguri.webp"
-    },
-    {
         "name": "닐센",
         "desc": "\"아주 좋아!\"",
         "image": "/images/profile/nilsen.webp"
@@ -34,8 +29,11 @@
         "desc": "지옥에서 사랑을 담아서......",
         "image": "/images/profile/rockstar.webp"
     },
-    
-
+    {
+        "name": "Dragonbuy",
+        "desc": "얼렁뚱땅 용사핑",
+        "image": "/images/profile/dragonbuy.webp"
+    },
     {
         "name": "파륄",
         "desc": "역대 최강의 호카게 사루토비 히루젠",
@@ -61,17 +59,6 @@
         "desc": "이끌리는 사람들을 위한 하나의 팻말같은 존재",
         "image": "/images/profile/muntree.webp"
     },
-    {
-        "name": "히버",
-        "desc": "1등이 목표입니다. 접어도 1등하고 갈게요.",
-        "image": "/images/profile/hiber.webp"
-    },
-    {
-        "name": "프렌치프레이",
-        "desc": "정말이지 당신이란 사람은...",
-        "image": "/images/profile/french.webp"
-    },
-    
     {
         "name": "김오전",
         "desc": "1억길을 모으는 그날까지...",

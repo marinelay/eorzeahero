@@ -15,11 +15,6 @@
         "image": "/images/profile/valler.webp"
     },
     {
-        "name": "Dragonbuy",
-        "desc": "얼렁뚱땅 용사핑",
-        "image": "/images/profile/dragonbuy.webp"
-    },
-    {
         "name": "꺼멍",
         "desc": "집 살 때까지 창천 열심히 민다...",
         "image": "/images/profile/black.webp"
@@ -43,5 +38,15 @@
         "name": "폴르",
         "desc": "나는 폴르다",
         "image": "/images/profile/pollu.webp"
+    },
+    {
+        "name": "히버",
+        "desc": "1등이 목표입니다. 접어도 1등하고 갈게요.",
+        "image": "/images/profile/hiber.webp"
+    },
+    {
+        "name": "프렌치프레이",
+        "desc": "정말이지 당신이란 사람은...",
+        "image": "/images/profile/french.webp"
     }
 ]
