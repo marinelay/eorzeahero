@@ -1,10 +1,5 @@
 [
     {
-        "name": "파렌도",
-        "desc": "에오르제아 용사 첫 졸업생",
-        "image": "/images/profile/fivedo.webp"
-    },
-    {
         "name": "달베리",
         "desc": "림사에서 마주칠 때마다 내적친밀감 느끼고 있어요",
         "image": "/images/profile/dalberry.webp"
@@ -13,5 +8,15 @@
         "name": "바반바",
         "desc": "baba is me",
         "image": "/images/profile/babanba.webp"
+    },
+    {
+        "name": "먼나무",
+        "desc": "이끌리는 사람들을 위한 하나의 팻말같은 존재",
+        "image": "/images/profile/muntree.webp"
+    },
+    {
+        "name": "기백우",
+        "desc": "나는 기백우다",
+        "image": "/images/profile/haerin.webp"
     }
 ]

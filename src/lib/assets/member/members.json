@@ -15,11 +15,6 @@
         "image": "/images/profile/janharu.webp"
     },
     {
-        "name": "기백우",
-        "desc": "나는 기백우다",
-        "image": "/images/profile/haerin.webp"
-    },
-    {
         "name": "닐센",
         "desc": "\"아주 좋아!\"",
         "image": "/images/profile/nilsen.webp"
@@ -50,14 +45,14 @@
         "image": "/images/profile/mangddan.webp"
     },
     {
+        "name": "파렌도",
+        "desc": "이름이 파도스러운 파렌도",
+        "image": "/images/profile/fivedo.webp"
+    },
+    {
         "name": "간식",
         "desc": "간식조아",
         "image": "/images/profile/gansik.webp"
-    },
-    {
-        "name": "먼나무",
-        "desc": "이끌리는 사람들을 위한 하나의 팻말같은 존재",
-        "image": "/images/profile/muntree.webp"
     },
     {
         "name": "김오전",
@@ -78,5 +73,20 @@
         "name": "검성'",
         "desc": "검의 길을 걷는 자",
         "image": "/images/profile/swordman.webp"
+    },
+    {
+        "name": "엘로시안",
+        "desc": "즐거운 개백수 파판생활",
+        "image": "/images/profile/yellowcyan.webp"
+    },
+    {
+        "name": "오달죽",
+        "desc": "지고천 홈리스 829일째",
+        "image": "/images/profile/comesweetdeath.webp"
+    },
+    {
+        "name": "비누솝",
+        "desc": "비누거품보글보글",
+        "image": "/images/profile/soapsoap.webp"
     }
 ]
