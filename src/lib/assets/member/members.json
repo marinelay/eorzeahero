@@ -31,7 +31,7 @@
     },
     {
         "name": "파뤌",
-        "desc": "역대 최강의 호카게 사루토비 히루젠",
+        "desc": "허리에 이어서 목도 박살난 디스크 용사",
         "image": "/images/profile/parruel.webp"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "name": "망나니딴따라",
-        "desc": "에오르제아의 분쟁이 사라지는 그날까지~!",
+        "desc": "진짜 망나니는 아닙니다",
         "image": "/images/profile/mangddan.webp"
     },
     {
@@ -81,12 +81,17 @@
     },
     {
         "name": "오달죽",
-        "desc": "지고천 홈리스 829일째",
+        "desc": "지고천 홈리스 8nn일째",
         "image": "/images/profile/comesweetdeath.webp"
     },
     {
         "name": "비누솝",
         "desc": "비누거품보글보글",
         "image": "/images/profile/soapsoap.webp"
+    },
+    {
+        "name": "코지린",
+        "desc": "샹궈는 늘맛있어요",
+        "image": "/images/profile/cozy.webp"
     }
 ]
