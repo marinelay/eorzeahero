@@ -18,5 +18,10 @@
         "name": "기백우",
         "desc": "나는 기백우다",
         "image": "/images/profile/haerin.webp"
+    },
+    {
+        "name": "망나니딴따라",
+        "desc": "진짜 망나니는 아닙니다",
+        "image": "/images/profile/mangddan.webp"
     }
 ]
