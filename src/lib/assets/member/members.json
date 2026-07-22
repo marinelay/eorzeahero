@@ -10,6 +10,11 @@
         "image": "/images/profile/dowon.webp"
     },
     {
+        "name": "기백우",
+        "desc": "나는 기백우다",
+        "image": "/images/profile/haerin.webp"
+    },
+    {
         "name": "잔하루",
         "desc": "이름이 멋스러운 잔하루.",
         "image": "/images/profile/janharu.webp"
@@ -75,11 +80,6 @@
         "image": "/images/profile/yellowcyan.webp"
     },
     {
-        "name": "오달죽",
-        "desc": "지고천 홈리스 8nn일째",
-        "image": "/images/profile/comesweetdeath.webp"
-    },
-    {
         "name": "비누솝",
         "desc": "비누거품보글보글",
         "image": "/images/profile/soapsoap.webp"
@@ -88,5 +88,15 @@
         "name": "코지린",
         "desc": "샹궈는 늘맛있어요",
         "image": "/images/profile/cozy.webp"
+    },
+    {
+        "name": "모모송",
+        "desc": "",
+        "image": "/images/profile/momosong.webp"
+    },
+    {
+        "name": "모모성",
+        "desc": "",
+        "image": "/images/profile/placeholder.webp"
     }
 ]
