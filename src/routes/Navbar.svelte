@@ -1,19 +1,31 @@
-<script>
-    import { onMount } from 'svelte';
-    import { page } from '$app/stores';
-    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
-    $: activeUrl = $page.url.pathname;
+<script lang="ts">
+	import { page } from '$app/stores';
+	let menuOpen = false;
+	const links = [
+		{ href: '/', label: '홈' },
+		{ href: '/member', label: '용사들' },
+		{ href: '/gallery', label: '추억' }
+	];
 </script>
 
-<Navbar class="border px-5 py-2 bg-gray-100">
-    <NavBrand href="/">
-        <!-- <img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
-        <span class="self-center whitespace-nowrap text-3xl font-semibold dark:text-white">자유부대 &lt;에용&gt;</span>
-    </NavBrand>
-    <NavHamburger />
-    <NavUl {activeUrl}>
-        <NavLi href="/" class="text-xl">Home</NavLi>
-        <NavLi href="/member" class="text-xl">Member</NavLi>
-        <NavLi href="/gallery" class="text-xl">Gallery</NavLi>
-    </NavUl>
-</Navbar>
+<nav aria-label="주요 메뉴">
+	<a href="/" class="brand" aria-label="에오르제아의 용사들 홈">
+		<span class="crest">✦</span><span>에오르제아의 용사들</span>
+	</a>
+	<button class="menu-button" onclick={() => (menuOpen = !menuOpen)} aria-expanded={menuOpen} aria-label="메뉴 열기">
+		<span></span><span></span>
+	</button>
+	<div class:open={menuOpen} class="links">
+		{#each links as link}
+			<a href={link.href} class:active={$page.url.pathname === link.href} onclick={() => (menuOpen = false)}>{link.label}</a>
+		{/each}
+	</div>
+</nav>
+
+<style>
+	nav { height: 70px; max-width: 1370px; margin: auto; padding: 0 clamp(1.4rem, 5vw, 5rem); display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 10; }
+	.brand { display: flex; align-items: center; gap: .55rem; color: #283830; text-decoration: none; font-size: .95rem; font-weight: 800; letter-spacing: -.04em; }.crest { color: #b5543e; font-size: 1.25rem; }
+	.links { display: flex; align-items: center; gap: 2rem; }.links a { color: #6b746d; font-size: .83rem; font-weight: 700; text-decoration: none; }.links a.active, .links a:hover { color: #b5543e; }
+	.menu-button { display: none; background: none; border: 0; padding: .4rem; }.menu-button span { display: block; width: 21px; height: 1px; margin: 5px; background: #273a34; }
+	@media (max-width: 600px) { .menu-button { display: block; }.links { display: none; position: absolute; top: 61px; left: 1.4rem; right: 1.4rem; padding: 1rem; background: #273a34; flex-direction: column; align-items: flex-start; gap: .85rem; }.links.open { display: flex; }.links a { color: #e9e6dd; } }
+</style>

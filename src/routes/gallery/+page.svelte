@@ -1,13 +1,20 @@
 <script lang="ts">
-    import { onMount, onDestroy } from 'svelte';
+    import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import Navbar from '../Navbar.svelte';
     import images from '$lib/assets/gallery/images.json';
   
     const itemsPerLoad = 12;
     // SSR 오류를 방지하기 위해 브라우저 환경에서만 초기 이미지를 설정합니다.
-    let displayedImages = browser ? images.slice(0, itemsPerLoad) : [];
-    let allImagesLoaded = displayedImages.length >= images.length;
+    type GalleryImage = { src: string; alt: string };
+    type DiscordGalleryResponse = {
+      photos: Array<GalleryImage & { id: string; publishedAt: string }>;
+      configured: boolean;
+    };
+
+    let galleryImages: GalleryImage[] = images;
+    let displayedImages = browser ? galleryImages.slice(0, itemsPerLoad) : [];
+    let allImagesLoaded = displayedImages.length >= galleryImages.length;
     
     /**
      * Svelte Action: 이미지 로드 후 그리드 아이템의 세로 길이를 동적으로 조절합니다.
@@ -62,14 +69,27 @@
     async function loadMore() {
       if (allImagesLoaded) return;
       const currentCount = displayedImages.length;
-      const nextImages = images.slice(currentCount, currentCount + itemsPerLoad);
+      const nextImages = galleryImages.slice(currentCount, currentCount + itemsPerLoad);
       displayedImages = [...displayedImages, ...nextImages];
-      if (displayedImages.length >= images.length) {
+      if (displayedImages.length >= galleryImages.length) {
         allImagesLoaded = true;
       }
     }
     
     onMount(() => {
+      // 설정된 경우 디스코드 사진을 우선 표시하고, 미설정/오류일 때는 기존 갤러리를 유지합니다.
+      fetch('/api/gallery')
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data: DiscordGalleryResponse | null) => {
+          if (!data?.photos.length) return;
+          galleryImages = [...data.photos, ...images];
+          displayedImages = galleryImages.slice(0, itemsPerLoad);
+          allImagesLoaded = displayedImages.length >= galleryImages.length;
+        })
+        .catch(() => {
+          // 갤러리는 디스코드 장애가 있어도 기존 사진으로 계속 제공됩니다.
+        });
+
       // 페이지가 로드될 때 초기 이미지 세트를 불러옵니다.
       if(displayedImages.length === 0) {
         loadMore();
@@ -127,9 +147,9 @@
   
     <div class="gallery px-8 py-10">
       {#each displayedImages as image, index}
-        <div class="image-wrapper" use:resizeGridItem on:click={() => openModal(index)}>
+        <button class="image-wrapper" type="button" use:resizeGridItem on:click={() => openModal(index)} aria-label="{image.alt} 크게 보기">
           <img src={image.src} alt="갤러리 썸네일 {index + 1}" loading="lazy" />
-        </div>
+        </button>
       {/each}
     </div>
     
@@ -141,8 +161,8 @@
   </div>
   
   {#if showModal}
-    <div class="modal" on:click={handleModalClick} role="dialog" aria-modal="true">
-      <span class="modal-close" on:click={closeModal}>&times;</span>
+    <div class="modal" on:click={handleModalClick} on:keydown={handleKeyDown} role="dialog" aria-modal="true" tabindex="-1">
+      <button class="modal-close" type="button" on:click={closeModal} aria-label="사진 닫기">&times;</button>
       <button class="modal-prev" on:click|stopPropagation={prevImage}>&larr;</button>
       <img src={displayedImages[currentIndex].src} alt="모달 이미지 {currentIndex + 1}" class="modal-content"/>
       <button class="modal-next" on:click|stopPropagation={nextImage}>&rarr;</button>
@@ -167,7 +187,10 @@
   
     .image-wrapper {
       /* 아이템의 세로 길이는 JavaScript가 설정하므로, 여기서는 기본값만 둡니다. */
-      grid-row-end: span 25; 
+      grid-row-end: span 25;
+      padding: 0;
+      border: 0;
+      background: none;
     }
   
     .image-wrapper img {
@@ -184,7 +207,7 @@
     .main-container { width: 85%; margin: auto; }
     .modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); display: flex; justify-content: center; align-items: center; z-index: 1000; }
     .modal-content { max-width: 90vw; max-height: 90vh; object-fit: contain; }
-    .modal-close { position: absolute; top: 15px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
+    .modal-close { position: absolute; top: 15px; right: 35px; border: 0; background: none; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
     .modal-prev, .modal-next { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 48px; cursor: pointer; padding: 16px; user-select: none; }
     .modal-prev { left: 20px; }
     .modal-next { right: 20px; }
