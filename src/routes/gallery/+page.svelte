@@ -172,11 +172,10 @@
   <style>
     .gallery {
       display: grid;
-      /* 🧐 2. 이미지 사이의 간격과 열 개수를 여기서 조절할 수 있습니다. */
-      gap: 1rem;
+      gap: 1.15rem;
       grid-template-columns: repeat(2, 1fr);
-      /* 모든 행의 기본 높이를 10px로 설정합니다. */
       grid-auto-rows: 10px;
+      padding-bottom: 2.5rem;
     }
   
     @media (min-width: 768px) {
@@ -186,23 +185,34 @@
     }
   
     .image-wrapper {
-      /* 아이템의 세로 길이는 JavaScript가 설정하므로, 여기서는 기본값만 둡니다. */
       grid-row-end: span 25;
       padding: 0;
       border: 0;
       background: none;
+      cursor: pointer;
+      transition: transform 220ms ease, filter 220ms ease;
     }
   
     .image-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover; /* 컨테이너를 꽉 채우고, 넘치는 부분은 잘라냅니다. */
-      border-radius: 8px;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(31, 41, 55, .1);
+      transition: transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
     }
-  
-    .image-wrapper:hover img { opacity: 0.85; }
+
+    /* 완전히 반듯하지 않은, 사진을 붙여둔 듯한 리듬 */
+    @media (min-width: 768px) {
+      .image-wrapper:nth-child(4n + 2) { transform: translateY(1.6rem) rotate(.45deg); }
+      .image-wrapper:nth-child(4n + 3) { transform: translateY(-.65rem) rotate(-.35deg); }
+      .image-wrapper:nth-child(4n + 4) { transform: translateY(.7rem) rotate(-.2deg); }
+      .image-wrapper:hover { filter: brightness(1.03); z-index: 1; }
+      .image-wrapper:hover img { transform: scale(1.025); box-shadow: 0 12px 26px rgba(31, 41, 55, .2); }
+    }
+    @media (max-width: 767px) {
+      .image-wrapper:nth-child(even) { transform: translateY(.65rem) rotate(.2deg); }
+    }
     .loader-container { text-align: center; padding: 2rem; color: #888; }
     .main-container { width: 85%; margin: auto; }
     .modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); display: flex; justify-content: center; align-items: center; z-index: 1000; }
