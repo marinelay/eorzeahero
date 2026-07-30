@@ -13,6 +13,7 @@
 
     export let members: Member[] = [];
     export let ranked = false;
+    export let rankOffset = 0;
     let triggerType: 'hover' | 'click' = 'hover';
 
     function getImageCrop(member: Member) {
@@ -32,13 +33,14 @@
     });
 </script>
 
-<div class="card-container pt-8">
+    <div class="card-container pt-8">
     {#each members as member, index}
         {@const imageCrop = getImageCrop(member)}
-        <div class:ranked={ranked && index < 5} class={`member-card rank-${index + 1}`}>
+        {@const rankIndex = index + rankOffset}
+        <div class:ranked={ranked && rankIndex < 5} class={`member-card rank-${rankIndex + 1}`}>
             <Card class="member-card-surface w-full h-52 p-3 sm:p-3">
                 <div class="flex flex-col items-center">
-                    <div class:ranked={ranked && index < 5} class={`profile-frame rank-${index + 1}`}>
+                    <div class:ranked={ranked && rankIndex < 5} class={`profile-frame rank-${rankIndex + 1}`}>
                         <div class="profile-image overflow-hidden rounded-full border-2 border-gray-300 dark:border-gray-700">
                             <img
                                 src={member.image}

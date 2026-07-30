@@ -8,7 +8,8 @@
 
     import Member from '$lib/components/Member.svelte';
 
-    const members2024 = members.slice(0, 6);
+    const members2023 = members.slice(0, 2);
+    const members2024 = members.slice(2, 6);
     const members2025 = members.slice(6, 11);
     const members2026 = members.slice(11);
 </script>
@@ -27,9 +28,13 @@
             <p class="text-lg text-gray-600">에오르제아를 최근까지 지키고 있는 용사들입니다. 다 같이 재밌게 지내요!</p>
         </div>
         <div class="year-sections">
+            <section class="year-section" aria-labelledby="members-2023">
+                <h2 id="members-2023">2023</h2>
+                <Member members={members2023} ranked/>
+            </section>
             <section class="year-section" aria-labelledby="members-2024">
                 <h2 id="members-2024">2024</h2>
-                <Member members={members2024} ranked/>
+                <Member members={members2024} ranked rankOffset={2}/>
             </section>
             <section class="year-section" aria-labelledby="members-2025">
                 <h2 id="members-2025">2025</h2>
