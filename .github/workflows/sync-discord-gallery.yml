@@ -36,6 +36,9 @@ jobs:
       - name: 의존성 설치
         run: pnpm install --frozen-lockfile
 
+      - name: 이미지 변환 도구 설치
+        run: pnpm gallery:setup
+
       - name: 새 사진 다운로드 및 WebP 변환
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

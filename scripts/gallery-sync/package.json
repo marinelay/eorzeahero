@@ -1,0 +1,11 @@
+{
+  "name": "eorzeahero-gallery-sync",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node sync.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}

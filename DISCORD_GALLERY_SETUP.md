@@ -23,6 +23,7 @@ secret 두 개를 등록해야 합니다.
 `.env.example`을 `.env`로 복사하고 실제 테스트용 토큰과 채널 ID를 입력한 뒤 실행합니다.
 
 ```bash
+pnpm gallery:setup
 pnpm gallery:sync
 ```
 

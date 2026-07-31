@@ -1,9 +1,11 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
-const root = process.cwd();
+const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(scriptDirectory, '../..');
 const manifestPath = path.join(root, 'src/lib/assets/gallery/discord-images.json');
 const outputDirectory = path.join(root, 'static/images/gallery/discord');
 const maximumSourceBytes = 25 * 1024 * 1024;
