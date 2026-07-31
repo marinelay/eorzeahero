@@ -16,6 +16,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"gallery:sync": "node scripts/sync-discord-gallery.mjs",
 		"test": "pnpm run check && pnpm run build"
 	},
 	"devDependencies": {
@@ -29,6 +30,7 @@
 		"flowbite": "^3.1.2",
 		"flowbite-svelte": "^1.10.22",
 		"flowbite-svelte-icons": "^2.2.1",
+		"sharp": "^0.34.5",
 		"svelte": "^5.37.1",
 		"svelte-check": "^4.3.0",
 		"tailwindcss": "^4.1.11",

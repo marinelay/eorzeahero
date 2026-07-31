@@ -2,17 +2,14 @@
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import Navbar from '../Navbar.svelte';
+    import discordImages from '$lib/assets/gallery/discord-images.json';
     import images from '$lib/assets/gallery/images.json';
   
     const itemsPerLoad = 12;
     // SSR 오류를 방지하기 위해 브라우저 환경에서만 초기 이미지를 설정합니다.
     type GalleryImage = { src: string; alt: string };
-    type DiscordGalleryResponse = {
-      photos: Array<GalleryImage & { id: string; publishedAt: string }>;
-      configured: boolean;
-    };
-
-    let galleryImages: GalleryImage[] = images;
+    const syncedImages: GalleryImage[] = discordImages;
+    let galleryImages: GalleryImage[] = [...syncedImages, ...images];
     let displayedImages = browser ? galleryImages.slice(0, itemsPerLoad) : [];
     let allImagesLoaded = displayedImages.length >= galleryImages.length;
     
@@ -77,19 +74,6 @@
     }
     
     onMount(() => {
-      // 설정된 경우 디스코드 사진을 우선 표시하고, 미설정/오류일 때는 기존 갤러리를 유지합니다.
-      fetch('/api/gallery')
-        .then((response) => (response.ok ? response.json() : null))
-        .then((data: DiscordGalleryResponse | null) => {
-          if (!data?.photos.length) return;
-          galleryImages = [...data.photos, ...images];
-          displayedImages = galleryImages.slice(0, itemsPerLoad);
-          allImagesLoaded = displayedImages.length >= galleryImages.length;
-        })
-        .catch(() => {
-          // 갤러리는 디스코드 장애가 있어도 기존 사진으로 계속 제공됩니다.
-        });
-
       // 페이지가 로드될 때 초기 이미지 세트를 불러옵니다.
       if(displayedImages.length === 0) {
         loadMore();

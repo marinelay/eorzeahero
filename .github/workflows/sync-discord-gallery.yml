@@ -1,0 +1,55 @@
+name: Discord 갤러리 동기화
+
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discord-gallery-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'marinelay/eorzeahero'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 가져오기
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: pnpm 준비
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.9.0
+
+      - name: Node.js 준비
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 의존성 설치
+        run: pnpm install --frozen-lockfile
+
+      - name: 새 사진 다운로드 및 WebP 변환
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_GALLERY_CHANNEL_ID: ${{ secrets.DISCORD_GALLERY_CHANNEL_ID }}
+        run: pnpm gallery:sync
+
+      - name: 변경사항 자동 커밋
+        run: |
+          git add static/images/gallery/discord src/lib/assets/gallery/discord-images.json
+          if git diff --cached --quiet; then
+            echo "새 사진이 없습니다."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "갤러리 사진 자동 동기화"
+          git push

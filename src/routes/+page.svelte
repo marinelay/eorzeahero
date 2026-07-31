@@ -1,29 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { Badge, Blockquote, Hr, P, Span, Timeline, TimelineItem, Tooltip } from 'flowbite-svelte';
 	import { ClockSolid, HomeOutline, QuoteSolid } from 'flowbite-svelte-icons';
+	import discordImages from '$lib/assets/gallery/discord-images.json';
 	import Navbar from './Navbar.svelte';
 
 	const buildDate = __BUILD_DATE__;
+	type GalleryImage = { src: string; alt: string };
+	const syncedImages: GalleryImage[] = discordImages;
 	const fallbackHeroPhoto = {
 		src: '/images/carousel/carousel1.webp',
 		alt: '에오르제아의 용사들 단체 사진'
 	};
-	let heroPhoto = fallbackHeroPhoto;
-	let isLatestPhoto = false;
-
-	onMount(() => {
-		fetch('/api/gallery')
-			.then((response) => (response.ok ? response.json() : null))
-			.then((data: { photos?: Array<{ src: string; alt: string }> } | null) => {
-				if (!data?.photos?.[0]) return;
-				heroPhoto = data.photos[0];
-				isLatestPhoto = true;
-			})
-			.catch(() => {
-				// 연동이 잠시 실패해도 기존 대표 사진을 계속 보여준다.
-			});
-	});
+	const heroPhoto = syncedImages[0] || fallbackHeroPhoto;
+	const isLatestPhoto = syncedImages.length > 0;
 </script>
 
 <svelte:head>
